@@ -1,0 +1,4 @@
+com\marconivr\testjersey\config\ApplicationConfig.class
+com\marconivr\testjersey\dao\PersonaDAO.class
+com\marconivr\testjersey\domain\Persona.class
+com\marconivr\testjersey\webservice\PersDataService.class
