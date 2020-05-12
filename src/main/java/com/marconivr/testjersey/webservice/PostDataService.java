@@ -20,11 +20,10 @@ import javax.ws.rs.core.MediaType;
 
 /**
  *
- * @author Antonio
+ * @author david
  */
-
 /**
- * Questo WebService mi permette di gestire una ipotetica anagrafica di persone
+ *
  */
 @Path("/posts")
 public class PostDataService {
@@ -56,7 +55,7 @@ public class PostDataService {
     @Consumes(MediaType.APPLICATION_JSON)
     public void newPost(Post p)
             throws IOException {
-        Post post = new Post(new Integer(p.getId()), p.getTitolo(), p.getAutore(), p.getContenuto(), p.getDataOra());
+        Post post = new Post(p.getId(), p.getTitolo(), p.getAutore(), p.getContenuto(), p.getDataOra());
         postDao.insertPost(post);
         // Qui si può eseguire il caricamento su database...
     }

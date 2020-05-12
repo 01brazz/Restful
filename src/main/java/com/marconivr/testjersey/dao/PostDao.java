@@ -17,25 +17,24 @@ import java.util.Map;
  */
 public class PostDao {
 
-    private static final List<Post> posts = new ArrayList<Post>();
+    private static List<Post> posts = new ArrayList<Post>();
 
     public PostDao() {
-        if (posts.isEmpty()) {
-            this.addPost();
-        }
+        posts = this.addPost();
     }
 
     private List<Post> addPost() {
+        List<Post> lista = new ArrayList<Post>();
         Post post = new Post(1, "Serata", "David", "Ieri e' stata una bella serata", "01/01/2020");
-        posts.add(post);
+        lista.add(post);
 
         post = new Post(2, "Londra", "Luca", "Partiti per le vacanze", "06/10/2019");
-        posts.add(post);
+        lista.add(post);
 
         post = new Post(3, "Torta", "Giovanni", "Oggi ho fatto una torta", "15/09/2019");
-        posts.add(post);
+        lista.add(post);
 
-        return posts;
+        return lista;
     }
 
     public Post getPost(int id) {

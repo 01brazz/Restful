@@ -15,7 +15,7 @@ import org.codehaus.jackson.annotate.JsonIgnore;
  * @author david
  */
 @XmlRootElement
-@XmlType(propOrder = {"id", "nome", "cognome", "eta", "telefono", "email"})
+@XmlType(propOrder = {"id", "titolo", "autore", "contenuto", "dataOra"})
 public class Post {
 
     private int id;
@@ -31,8 +31,8 @@ public class Post {
     public Post() {
     }
 
-    public Post(Integer Id, String titolo, String autore, String contenuto, String dataOra) {
-        this.id = Id;
+    public Post(Integer id, String titolo, String autore, String contenuto, String dataOra) {
+        this.id = id;
         this.titolo = titolo;
         this.autore = autore;
         this.contenuto = contenuto;
@@ -90,7 +90,6 @@ public class Post {
 
     @Override
     public String toString() {
-        return "Persona{" + "id=" + id + ", nome=" + titolo
-                + ", cognome=" + autore + '}';
+        return "Post{" + "id = " + id + '}';
     }
 }
